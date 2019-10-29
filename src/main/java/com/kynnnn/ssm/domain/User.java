@@ -18,8 +18,8 @@ import java.util.Date;
 public class User implements Serializable {
     private long id;
     private String email;
-    private String password;
     private String username;
+    private String password;
     private String role;
     private int status;
     private Date regTime;

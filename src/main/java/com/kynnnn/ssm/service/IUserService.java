@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
  * @description
  * @date 2019/10/25 16:45
  */
-@Service
+
 public interface IUserService {
 
     /**
@@ -16,7 +16,7 @@ public interface IUserService {
      * @param userId
      * @return
      */
-    User queryUser(String userId);
+    User queryUser(long userId);
 
     /**
      * 添加一个用户
