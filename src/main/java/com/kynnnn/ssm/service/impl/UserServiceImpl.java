@@ -1,7 +1,9 @@
 package com.kynnnn.ssm.service.impl;
 
+import com.kynnnn.ssm.dao.IUserDao;
 import com.kynnnn.ssm.domain.User;
 import com.kynnnn.ssm.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,9 +14,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements IUserService {
 
+    @Autowired
+    private IUserDao  userDao;
+
     @Override
     public User queryUser(long userId) {
-        return null;
+        return userDao.queryUser(userId);
     }
 
     @Override

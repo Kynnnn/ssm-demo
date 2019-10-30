@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+import java.util.Date;
 
 
 /**
@@ -23,8 +25,8 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
-    @RequestMapping("/showUser.do")
-    public String queryUser(@PathVariable("id") long id) {
+    @RequestMapping("/showUser/{id}")
+    public String queryUser(@PathVariable("id")long id) {
         User user = userService.queryUser(id);
         String userString = JSON.toJSONString(user);
         return userString;
