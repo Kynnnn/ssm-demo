@@ -8,4 +8,8 @@
         SELECT * FROM user WHERE id = #{id}
     </select>
 
+    <insert id="addUser" parameterType="com.kynnnn.ssm.domain.User">
+        insert into user()
+    </insert>
+
 </mapper>

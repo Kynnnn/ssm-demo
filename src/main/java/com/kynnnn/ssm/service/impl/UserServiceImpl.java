@@ -24,6 +24,6 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public int addUser(User user) {
-        return 0;
+        return userDao.addUser(user);
     }
 }

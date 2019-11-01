@@ -11,4 +11,6 @@ import org.springframework.stereotype.Component;
  */
 public interface IUserDao {
     User queryUser(long userId);
+
+    int addUser(User user);
 }
